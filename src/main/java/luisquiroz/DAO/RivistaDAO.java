@@ -3,29 +3,28 @@ package luisquiroz.DAO;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.TypedQuery;
-import luisquiroz.entities.Libro;
+import luisquiroz.entities.Rivista;
 
 import java.util.List;
 
-public class LibroDAO {
+public class RivistaDAO {
 
-    private final EntityManager entityManager;
+    private EntityManager entityManager;
 
-    public LibroDAO(EntityManager entityManager) {
+    public RivistaDAO(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
 
-    public void salva(Libro libro) {
+    public void salva(Rivista rivista) {
         EntityTransaction transaction = entityManager.getTransaction();
         try {
             transaction.begin();
-            entityManager.persist(libro);
+            entityManager.persist(rivista);
             transaction.commit();
-            System.out.println("salvataggio effettuato");
+            System.out.println("salvato con successo:" + rivista.getTitolo());
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-
     }
 
 }
