@@ -27,8 +27,41 @@ public abstract class ElementoCatalogo {
     @Column(name = "numero_pagine", nullable = false)
     private int numeroPagine;
 
-    // Costruttori, getter, setter, etc.
+    public String getIsbn() {
+        return isbn;
+    }
 
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public LocalDate getAnnoPubblicazione() {
+        return annoPubblicazione;
+    }
+
+    public void setAnnoPubblicazione(LocalDate annoPubblicazione) {
+        this.annoPubblicazione = annoPubblicazione;
+    }
+
+    public String getTitolo() {
+        return titolo;
+    }
+
+    public void setTitolo(String titolo) {
+        this.titolo = titolo;
+    }
+
+    public int getNumeroPagine() {
+        return numeroPagine;
+    }
+
+    public void setNumeroPagine(int numeroPagine) {
+        this.numeroPagine = numeroPagine;
+    }
+
+    public Long getId() {
+        return id;
+    }
 
     public ElementoCatalogo() {
     }

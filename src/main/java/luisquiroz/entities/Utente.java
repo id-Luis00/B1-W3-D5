@@ -25,7 +25,41 @@ public class Utente {
     @Column(unique = true, nullable = false)
     private String numeroTessera;
 
-    // Costruttori, getter, setter, etc.
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCognome() {
+        return cognome;
+    }
+
+    public void setCognome(String cognome) {
+        this.cognome = cognome;
+    }
+
+    public LocalDate getDataNascita() {
+        return dataNascita;
+    }
+
+    public void setDataNascita(LocalDate dataNascita) {
+        this.dataNascita = dataNascita;
+    }
+
+    public String getNumeroTessera() {
+        return numeroTessera;
+    }
+
+    public void setNumeroTessera(String numeroTessera) {
+        this.numeroTessera = numeroTessera;
+    }
+
+    public Long getId() {
+        return id;
+    }
 
 
     public Utente() {

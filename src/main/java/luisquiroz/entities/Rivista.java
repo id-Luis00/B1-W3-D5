@@ -12,7 +12,13 @@ public class Rivista extends ElementoCatalogo {
     @Column(nullable = false)
     private Periodicita periodicita;
 
-    // Costruttori, getter, setter, etc.
+    public Periodicita getPeriodicita() {
+        return periodicita;
+    }
+
+    public void setPeriodicita(Periodicita periodicita) {
+        this.periodicita = periodicita;
+    }
 
     public enum Periodicita {
         SETTIMANALE, MENSILE, SEMESTRALE
